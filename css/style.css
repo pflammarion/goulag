@@ -1,0 +1,32 @@
+html{
+    font-family: Verdana, sans-serif;
+    --blue : #3333FF;
+    --red : #FF0000;
+    --green : #97D077;
+    text-align: center;
+}
+
+
+.blue{
+    color: var(--blue);
+}
+
+.red{
+    color: var(--red);
+}
+
+ul{
+    display: inline-block;
+    text-align: left;
+}
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.image-container img{
+    border : 2px black dashed;
+    height: 120px;
+}
