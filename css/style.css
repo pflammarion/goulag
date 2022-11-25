@@ -9,10 +9,10 @@ html{
     padding: 0;
 }
 p{
-    font-size: 18px;
+    font-size: 20px;
 }
 h3{
-    font-size: 24px;
+    font-size: 26px;
 }
 .blue{
     color: var(--blue);
@@ -48,17 +48,19 @@ h3{
     padding: 10px;
 }
 
+.exercices h3{
+    margin: 50px 0;
+}
+
 .exercices .question{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-right: 20px;
     padding: 10px;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.exercices .question select,
-.exercices .question .answer{
-}
 
 .exercices button{
     border: 2px black solid;
@@ -67,7 +69,7 @@ h3{
     cursor: pointer;
     padding: 20px 40px;
     font-size: 20px;
-    margin-bottom: 50px;
+    margin: 50px 0;
 }
 
 .button-container{
@@ -154,11 +156,11 @@ header a:hover, .dropdown:hover .dropbtn {
 @media screen and (max-width: 800px) {
 
     p{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     h3{
-        font-size: 18px;
+        font-size: 20px;
     }
     .lecon .image-container{
         flex-direction: column;
@@ -174,6 +176,7 @@ header a:hover, .dropdown:hover .dropbtn {
         flex-direction: column;
         align-items: start;
         gap: 5px;
+        width: 90%;
     }
 
     header{
