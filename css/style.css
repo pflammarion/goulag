@@ -4,8 +4,16 @@ html{
     --red : #FF0000;
     --green : #97D077;
 }
-
-
+* {
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: 18px;
+}
+h3{
+    font-size: 24px;
+}
 .blue{
     color: var(--blue);
 }
@@ -16,6 +24,7 @@ html{
 
 .lecon{
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .lecon ul{
@@ -31,27 +40,34 @@ html{
 
 .lecon .image-container img{
     border : 2px black dashed;
-    height: 120px;
+    height: auto;
+    width: 120px;
+}
+.exercices{
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .exercices .question{
-    width: 100%;
-    margin: 20px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding: 10px;
 }
 
 .exercices .question select,
 .exercices .question .answer{
-    position: absolute;
-    right: 20px;
 }
 
 .exercices button{
     border: 2px black solid;
     border-radius: 50%;
-    padding: 20px;
     background: linear-gradient(white, var(--green));
+    cursor: pointer;
+    padding: 20px 40px;
+    font-size: 20px;
+    margin-bottom: 50px;
 }
 
 .button-container{
@@ -83,11 +99,16 @@ header a {
     outline: none;
     color: var(--green);
     padding: 10px 50px;
+    width: 250px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
     border: solid 1px black;
     font-weight: bold;
+}
+
+.dropdown .dropdown-content{
+    width: 250px;
 }
 
 header a:hover, .dropdown:hover .dropbtn {
@@ -123,4 +144,60 @@ header a:hover, .dropdown:hover .dropbtn {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.phone{
+    display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    p{
+        font-size: 14px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+    .lecon .image-container{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .lecon p{
+        width: 300px;
+        margin: 20px auto;
+    }
+
+    .exercices .question{
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+    }
+
+    header{
+        display: block;
+        position: sticky;
+        top : 0;
+    }
+    .dropdown{
+        display: none;
+    }
+
+    .exercices button{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .phone{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    .phone a{
+        border: solid 2px black;
+    }
+
 }
