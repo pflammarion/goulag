@@ -34,3 +34,29 @@ html{
     height: 120px;
 }
 
+.exercices .question{
+    width: 100%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.exercices .question select,
+.exercices .question .answer{
+    position: absolute;
+    right: 20px;
+}
+
+.exercices button{
+    border: 2px black solid;
+    border-radius: 50%;
+    padding: 20px;
+    background: linear-gradient(white, var(--green));
+}
+
+.button-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+

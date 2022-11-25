@@ -15,94 +15,115 @@
 
   </header>
 
-  <form>
-    <div id="verbe">
-      <h1>Trouver le verbe</h1>
-      <div class="question">
-        Aujourd'hui, Adam mange une poire et une clémentine.
-        <select>
-          <option>
-            A
-          </option>
-        </select>
+  <div class="exercices">
+    <form>
+      <div id="verbe">
+        <h3 class="red">Trouver le verbe</h3>
+        <div class="question">
+          Aujourd'hui, Adam mange une poire et une clémentine.
+          <label>
+            <select>
+              <option>Mange</option>
+              <option>Poire</option>
+            </select>
+          </label>
+        </div>
+        <div class="question">
+          Ils chantent une chanson dans la classe.
+          <label>
+            <select>
+              <option>Chantent</option>
+              <option>Classe</option>
+            </select>
+          </label>
+        </div>
+        <div class="question">
+          Vous regardez un film très drôle.
+          <label>
+            <select>
+              <option>Regardez</option>
+              <option>Film</option>
+            </select>
+          </label>
+        </div>
+        <div class="question">
+          Demain nous irons acheter un sapin de Noël.
+          <label>
+            <select>
+              <option>Irons</option>
+              <option>Acheter</option>
+            </select>
+          </label>
+        </div>
       </div>
-      <div class="question">
-        Ils chantent une chanson dans la classe.
-        <select>
-          <option>
-            A
-          </option>
-        </select>
+      <div class="button-container">
+        <button type="submit"><span class="red">Correction</span></button>
       </div>
-      <div class="question">
-        Vous regardez un film très drôle.
-        <select>
-          <option>
-            A
-          </option>
-        </select>
+    </form>
+    <form>
+      <div id="sujet">
+        <h3><span class="blue">Est-ce que ce qui est souligné est un sujet ?</span></h3>
+        <div class="question">
+          Aujourd'hui, <u>Adam</u> mange une poire et une clémentine.
+          <div class="answer">
+            <label>
+              Vrai
+              <input type="radio">
+            </label>
+            <label>
+              Faux
+              <input type="radio">
+            </label>
+          </div>
+
+        </div>
+        <div class="question">
+          Ils chantent <u>une chanson</u> dans la classe.
+          <div class="answer">
+            <label>
+              Vrai
+              <input type="radio">
+            </label>
+            <label>
+              Faux
+              <input type="radio">
+            </label>
+          </div>
+
+        </div>
+        <div class="question">
+          <u>Vous</u> regardez un film très drôle.
+          <div class="answer">
+            <label>
+              Vrai
+              <input type="radio">
+            </label>
+            <label>
+              Faux
+              <input type="radio">
+            </label>
+          </div>
+
+        </div>
+        <div class="question">
+          <u>Demain</u> nous irons acheter un sapin de Noël.
+          <div class="answer">
+            <label>
+              Vrai
+              <input type="radio">
+            </label>
+            <label>
+              Faux
+              <input type="radio">
+            </label>
+          </div>
+        </div>
       </div>
-      <div class="question">
-        Demain nous irons acheter un sapin de Noël.
-        <select>
-          <option>
-            A
-          </option>
-        </select>
+      <div class="button-container">
+        <button type="submit"><span class="blue">Correction</span></button>
       </div>
-    </div>
-    <button type="submit">Correction</button>
-  </form>
-  <form>
-    <div id="sujet">
-      <h1><span>Est-ce que ce qui est souligné est un sujet ?</span></h1>
-      <div class="question">
-        Aujourd'hui, <u>Adam</u> mange une poire et une clémentine.
-        <label>
-          Vrai
-          <input type="radio">
-        </label>
-        <label>
-          Faux
-          <input type="radio">
-        </label>
-      </div>
-      <div class="question">
-        Ils chantent <u>une chanson</u> dans la classe.
-        <label>
-          Vrai
-          <input type="radio">
-        </label>
-        <label>
-          Faux
-          <input type="radio">
-        </label>
-      </div>
-      <div class="question">
-        <u>Vous</u> regardez un film très drôle.
-        <label>
-          Vrai
-          <input type="radio">
-        </label>
-        <label>
-          Faux
-          <input type="radio">
-        </label>
-      </div>
-      <div class="question">
-        <u>Demain</u> nous irons acheter un sapin de Noël.
-        <label>
-          Vrai
-          <input type="radio">
-        </label>
-        <label>
-          Faux
-          <input type="radio">
-        </label>
-      </div>
-    </div>
-    <button type="submit"><span>Correction</span></button>
-  </form>
+    </form>
+  </div>
 
   <footer>
 
