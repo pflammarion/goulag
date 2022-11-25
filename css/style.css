@@ -3,7 +3,6 @@ html{
     --blue : #3333FF;
     --red : #FF0000;
     --green : #97D077;
-    text-align: center;
 }
 
 
@@ -15,18 +14,23 @@ html{
     color: var(--red);
 }
 
-ul{
+.lecon{
+    text-align: center;
+}
+
+.lecon ul{
     display: inline-block;
     text-align: left;
 }
 
-.image-container{
+.lecon .image-container{
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-.image-container img{
+.lecon .image-container img{
     border : 2px black dashed;
     height: 120px;
 }
+
