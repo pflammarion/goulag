@@ -10,4 +10,7 @@ SELECT DISTINCT prenomEnfant, nomEnfant FROM enfant ORDER BY enfant.prenomEnfant
 
 ##3
 
-
+SELECT COUNT(*)
+from enfant
+  JOIN categorie on enfant.id_categorie = categorie.id_categorie
+WHERE categorie.id_categorie = 1;
