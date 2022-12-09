@@ -2,8 +2,8 @@ USE  centreLoisirs;
 
 #1
 alter table enfant
-    add constraint fk_enfant
-        foreign key (id_categorie) references categorie (id_categorie);
+add constraint fk_enfant
+foreign key (id_categorie) references categorie (id_categorie);
 
 #2
 SELECT centre.nom FROM centre GROUP BY centre.nom order by centre.nom DESC;
