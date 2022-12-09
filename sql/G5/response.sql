@@ -25,3 +25,25 @@ VALUES ('1-2 ans');
 DELETE
 FROM enfant
 WHERE enfant.nomEnfant = 'Long' AND enfant.prenomEnfant = 'Angèle';
+
+#6
+UPDATE personne
+SET personne.nomPersonne = 'Leblanc-Duchaine'
+WHERE personne.nomPersonne = 'Duchaine' AND personne.prenomPersonne = 'Léa';
+
+#7
+
+SELECT concat(enfant.prenomEnfant, ' ', enfant.nomEnfant, ',', enfant.dateNaissance)
+FROM enfant
+    LEFT JOIN enfant_centre ec on enfant.id_enfant = ec.id_enfant
+WHERE cantine=1;
+
+#8
+
+SELECT categorie.nom, COUNT(*) AS Count
+from personne_categorie
+         LEFT JOIN categorie on personne_categorie.id_categorie = categorie.id_categorie
+GROUP BY categorie.nom;
+
+#9
+
