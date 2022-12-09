@@ -47,3 +47,7 @@ GROUP BY categorie.nom;
 
 #9
 
+UPDATE centre SET centre.id_dirigeant = (SELECT personne.id_personne
+       FROM personne
+       WHERE nomPersonne='Bertrand' AND prenomPersonne='Camille')
+WHERE centre.nom = 'Jean Monnet';
