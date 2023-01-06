@@ -1,3 +1,11 @@
+#3.	Comptez le nombre de personnes dont l’abonnement a expiré
+# Deux methodes possibles
+
+SELECT COUNT(personne.id_personne) as abonnementExpiré
+FROM personne
+LEFT JOIN ludotheque_personne lp on personne.id_personne = lp.id_personne
+WHERE lp.dateFin < CURRENT_DATE;
+
 #Listez toutes les personnes dont le nom commence par « Dup »
 
 SELECT * FROM personne WHERE personne.nomPersonne LIKE 'Dup%';
