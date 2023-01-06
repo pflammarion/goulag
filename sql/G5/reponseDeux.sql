@@ -11,4 +11,10 @@ SELECT * FROM personne
 WHERE l.nom = 'Ludido';
 
 # Listez toutes les personnes nom et prénom séparés par espace (en une seule colonne appelée enfants) qui travaillent à la ludothèque qui a pour nom « La ludo »
+
+SELECT concat(personne.nomPersonne, ' ', personne.prenomPersonne) as enfants FROM personne
+                  LEFT JOIN ludotheque_personne lp on personne.id_personne = lp.id_personne
+                  LEFT JOIN ludotheque l on l.id_ludotheque = lp.id_ludotheque
+WHERE l.nom = 'La ludo';
+
 # Trouvez le nombre d’employés dans chaque ludothèque, groupé par ludothèque
