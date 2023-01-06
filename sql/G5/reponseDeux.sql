@@ -18,3 +18,10 @@ SELECT concat(personne.nomPersonne, ' ', personne.prenomPersonne) as enfants FRO
 WHERE l.nom = 'La ludo';
 
 # Trouvez le nombre d’employés dans chaque ludothèque, groupé par ludothèque
+SELECT l.nom, COUNT(*) as nombre_employes
+FROM personne
+         LEFT JOIN ludotheque_personne lp on personne.id_personne = lp.id_personne
+         LEFT JOIN ludotheque l on l.id_ludotheque = lp.id_ludotheque
+GROUP BY l.nom;
+
+
