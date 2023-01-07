@@ -6,7 +6,8 @@
     <script src="./public/js/index.js"></script>
 </head>
 <body>
-<form method="POST" action="traitement.php"> <label>Nom</label>
+<form id="form" method="POST" action="traitement.php">
+    <label>Nom</label>
     <input type="text" name="nom">
     <label>Prénom</label>
     <input type="text" name="prenom">
