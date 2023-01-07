@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./public/css/index.css">
 </head>
 <body>
-<form method="POST" action="traitement.php" onsubmit="formSubmit()">
+<form method="POST" action="./controller/traitement.php" onsubmit="formSubmit()">
     <label>Nom</label>
     <input type="text" name="nom">
     <label>Prénom</label>
