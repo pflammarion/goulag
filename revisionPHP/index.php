@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Formulaire admission</title>
-    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
+    <link rel="stylesheet" type="text/css" href="public/css/index.css">
 </head>
 <body>
-<form method="POST" action="./controller/traitement.php" onsubmit="formSubmit()">
+<form method="POST" action="controller/traitement.php" onsubmit="formSubmit()">
     <label>Nom</label>
     <input type="text" name="nom">
     <?php
@@ -48,6 +48,6 @@ if(isset($_COOKIE['form_submission'], $_GET['validate'])){
     echo '<p>'. $_COOKIE['form_submission'] .'</p>';
 }
 ?>
-<script src="./public/js/index.js"></script>
+<script src="public/js/index.js"></script>
 </body>
 </html>
