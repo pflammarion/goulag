@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>Formulaire admission</title>
-    <link rel="stylesheet" type="text/css" href="./public/css/index.css"> <script src="traitement.js"></script>
+    <link rel="stylesheet" type="text/css" href="./public/css/index.css">
+    <script src="./public/js/index.js"></script>
 </head>
 <body>
 <form method="POST" action="traitement.php"> <label>Nom</label>

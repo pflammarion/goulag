@@ -1,6 +1,6 @@
 input {
     display: block;
-    width: 50%;
+    width: 100%;
     margin-bottom:15px;
 }
 label {
@@ -13,4 +13,9 @@ input[type=submit]{
     color:white;
     text-align: center;
     margin-top: 25px;
+}
+
+form{
+    margin: 50px auto;
+    width: 500px;
 }
