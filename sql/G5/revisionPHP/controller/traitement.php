@@ -5,6 +5,7 @@ $submit = false;
 if(!isset($_POST['nom']) || $_POST['nom'] === ""){
     $lastname= checkInput($_POST['nom']);
     setcookie('lastname', $lastname, time() + 3600);
+    //je ne suis pas sur que ce soit la meilleur des solutions pour afficher les erreur
     setcookie('lastname_error', 'Merci de remplir votre nom SVP', time() + 3600);
     exit();
 }
