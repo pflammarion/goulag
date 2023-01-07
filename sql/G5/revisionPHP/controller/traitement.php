@@ -2,25 +2,25 @@
 
 $nom = $prenom = $date_naissance = $email = $email_confirmation = '';
 $submit = false;
-if(!isset($_POST['nom'])){
+if(!isset($_POST['nom']) || $_POST['nom'] === ""){
     $lastname= checkInput($_POST['nom']);
     setcookie('lastname', $lastname, time() + 3600);
     setcookie('lastname_error', 'Merci de remplir votre nom SVP', time() + 3600);
     exit();
 }
-if (!isset($_POST['prenom'])){
+if (!isset($_POST['prenom']) || $_POST['prenom'] === ""){
     $firstname= checkInput($_POST['prenom']);
     setcookie('firstname', $firstname, time() + 3600);
     setcookie('firstname_error', 'Merci de remplir votre prenom SVP', time() + 3600);
     exit();
 }
-if (!isset($_POST['date'])){
+if (!isset($_POST['date']) || $_POST['date'] === ""){
     $date = $_POST['date'];
     setcookie('date', $date, time() + 3600);
     setcookie('date_error', 'Merci de remplir votre date de naissance SVP', time() + 3600);
     exit();
 }
-if (!isset($_POST['email'])){
+if (!isset($_POST['email']) || $_POST['email'] === ""){
     if (checkEmail($_POST['email'])){
         $email = $_POST['email'];
         setcookie('email', $email, time() + 3600);
@@ -28,7 +28,7 @@ if (!isset($_POST['email'])){
         exit();
     }
 }
-if (!isset($_POST['emailConfirmation'])){
+if (!isset($_POST['emailConfirmation']) || $_POST['emailConfirmation'] === ""){
     if(checkEmail($_POST['emailConfirmation'])){
         $email_confirmation = $_POST['emailConfirmation'];
         setcookie('emailConfirmation', $email_confirmation, time() + 3600);
