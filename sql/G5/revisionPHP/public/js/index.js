@@ -3,7 +3,7 @@ function formSubmit (){
 }
 let date = document.getElementById('date');
 date.addEventListener('focusout', (event) => {
-
+    event.preventDefault();
     let dateOfBirth = new Date(date.value);
     let age = new Date().getFullYear() - dateOfBirth.getFullYear();
     let month = new Date().getMonth() - dateOfBirth.getMonth();
