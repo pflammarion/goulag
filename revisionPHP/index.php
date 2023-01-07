@@ -7,13 +7,7 @@
 <body>
 <form method="POST" action="controller/traitement.php" onsubmit="formSubmit()">
     <label>Nom</label>
-    <input type="text" name="nom" value="
-    <?php
-    if(isset($_COOKIE['lastname'], $_GET['submit']) && $_COOKIE['lastname'] !== ""){
-        echo $_COOKIE['lastname'];
-    }
-    ?>
-">
+    <input type="text" name="nom" value="<?php if(isset($_COOKIE['lastname'], $_GET['submit']) && $_COOKIE['lastname'] !== ""){echo $_COOKIE['lastname'];} ?>">
     <?php
     if(isset($_COOKIE['firstname_error'], $_GET['submit'])){
         echo '<p class="error">'. $_COOKIE['firstname_error'] .'</p>';
