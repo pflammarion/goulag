@@ -1,5 +1,5 @@
 function formSubmit (){
-    confirm("Etes-vous sûr de soumettre votre candidature ?")
+    return confirm("Etes-vous sûr de soumettre votre candidature ?")
 }
 let date = document.getElementById('date');
 date.addEventListener('focusout', (event) => {

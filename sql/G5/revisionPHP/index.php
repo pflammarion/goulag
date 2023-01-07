@@ -8,6 +8,10 @@
 <form method="POST" action="./controller/traitement.php" onsubmit="formSubmit()">
     <label>Nom</label>
     <input type="text" name="nom">
+    <?php
+    if(isset($_COOKIE['firstname_error'], $_GET['submit']))
+        echo '<p>'. $_COOKIE['firstname_error'] .'</p>'
+    ?>
     <label>Prénom</label>
     <input type="text" name="prenom">
     <label>Date de naissance</label>
