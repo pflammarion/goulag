@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST["submit-btn"])){
+if (isset($_POST["submit-btn"], $_POST['nom'], $_POST['prenom'], $_POST['dateNaissance'], $_POST['email'], $_POST['emailConfirmation'])){
     $nom = $_POST["nom"];
     $prenom = $_POST["prenom"];
     $dateNaissance = $_POST["dateNaissance"];
