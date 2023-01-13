@@ -9,17 +9,18 @@
   <img src="../public/images/quiz.png" alt="quiz">
 </div>
   <h1>Merci de remplir ce formulaire :</h1>
-  
- 
-    
-        <form>  
-                       
+
+        <form method="post" action="">
+            <p class="erreur"><?php if(isset($_GET["all"]) && $_GET["all"] === "true"){echo "Tous les champs doivent être remplis";}?></p>
           <label for="prenom">Prénom* : </label><br>
-          <input type="text" id="prenom" name="prenom" ><br><br>
+          <input type="text" id="prenom" name="prenom" value="<?php if(isset($_COOKIE['prenom'])){echo $_COOKIE['prenom'];}?>" ><br><br>
+            <p class="erreur"><?php if(isset($_GET["prenom"]) && $_GET["prenom"] === "true"){echo "Le prénom doit être rempli";}?></p>
           <label for="nom">Nom* : </label><br>
-          <input type="text" id="nom" name="nom" ><br><br>
+          <input type="text" id="nom" name="nom" value="<?php if(isset($_COOKIE['nom'])){echo $_COOKIE['nom'];}?>" ><br><br>
+            <p class="erreur"><?php if(isset($_GET["nom"]) && $_GET["nom"] === "true"){echo "Le nom doit être rempli";}?></p>
           <label for="email">e-Mail* : </label><br>
-          <input type="text" id="email" name="email" ><br><br>
+          <input type="text" id="email" name="email" value="<?php if(isset($_COOKIE['email'])){echo $_COOKIE['email'];}?>"><br><br>
+            <p class="erreur"><?php if(isset($_GET["email"]) && $_GET["email"] === "true"){echo "L'email doit être rempli";}?></p>
           *Champs obligatoires
 
           <div class="quiz">
@@ -34,7 +35,8 @@
                <option value="42"> 42</option>
                <option value="38"> 38</option>
               </select>
-                 
+                <p class="erreur2"><?php if(isset($_GET["carre"]) && $_GET["carre"] === "true"){echo "essaie encore";}?></p>
+
             </div>        
 
             <div class="question">
@@ -45,9 +47,10 @@
                <label for="html">Oui</label><br>
                <input type="radio" id="css" name="horizontaux" value="Non">
                <label for="css">Non</label><br>
-                  
+
               </div>
-            </div> 
+                <p class="erreur2"><?php if(isset($_GET["hor"]) && $_GET["hor"] === "true"){echo "essaie encore";}?></p>
+            </div>
           </div>         
                
           <input type="submit" value="Vérifier">
