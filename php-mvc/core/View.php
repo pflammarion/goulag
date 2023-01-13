@@ -16,7 +16,6 @@ class View
         extract($params);
         ob_start();
         include_once __DIR__ . "/../app/views/$layoutName.php";
-        echo $view;
         return str_replace('{{content}}', $this->renderViewOnly($view, $params), ob_get_clean());
     }
 

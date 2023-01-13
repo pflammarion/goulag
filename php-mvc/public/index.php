@@ -30,17 +30,17 @@ spl_autoload_register(function ($class) {
 $dbConfig = [
     'hostname' => 'localhost',
     'username' => 'root',
-    'password' => 'password',
+    'password' => '',
     'database' => ''
 ];
 
 $app = new Application($dbConfig);
 
-$app->router->get('/', [HomeController::class, 'index']);
-$app->router->get('/login', [AuthController::class, 'login']);
-$app->router->post('/login', [AuthController::class, 'login']);
-$app->router->get('/register', [AuthController::class, 'register']);
-$app->router->post('/register', [AuthController::class, 'register']);
-$app->router->get('/faq', [HomeController::class, 'faq']);
+$app->router->get('', [HomeController::class, 'index']);
+$app->router->get('login', [AuthController::class, 'login']);
+$app->router->post('login', [AuthController::class, 'login']);
+$app->router->get('register', [AuthController::class, 'register']);
+$app->router->post('register', [AuthController::class, 'register']);
+$app->router->get('faq', [HomeController::class, 'faq']);
 
 $app->run();

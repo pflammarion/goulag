@@ -54,7 +54,13 @@ class Router
     public function resolve()
     {
         $method = strtolower($_SERVER['REQUEST_METHOD']);
-        $path = $_SERVER['REDIRECT_URL'] ?? '/';
+        if(isset($_SERVER['REQUEST_URI'])){
+            $string = $_SERVER['REQUEST_URI'];
+            $parts = explode("/", $string);
+            $parts = array_slice($parts, 1);
+            $path = implode("", $parts);
+        }
+        else $path = '/';
         $callback = $this->_routes[$method][$path] ?? false;
         if (!$callback) {
             http_response_code(404);
