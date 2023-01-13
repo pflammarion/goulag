@@ -22,6 +22,3 @@ date.addEventListener('focusout', (event) => {
     }
     else date.style.color = 'green';
 });
-function ageChecker(date){
-
-}
