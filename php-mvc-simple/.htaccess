@@ -1,0 +1,12 @@
+# Disable directory listings (prevent browser from listing files in directory)
+Options -Indexes
+
+# Enable the mod_rewrite module to use rewrite rules to control how URLs are mapped to files on the server
+RewriteEngine on
+
+# Only apply the following rewrite rule if the requested URL does not correspond to an existing file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all URLs to index.php, passing the original URL as a query string parameter
+RewriteRule ^(.*)$ index.php?$1

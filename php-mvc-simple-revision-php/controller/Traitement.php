@@ -51,5 +51,8 @@ class Traitement {
             }
         }
         else require_once './view/form.php';
+        //$personne = new Personne();
+        //$message = $personne->getMessage();
+        //require_once './view/view.php';
     }
 }
