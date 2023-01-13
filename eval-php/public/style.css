@@ -1,0 +1,46 @@
+*{
+	font-family: "Lucida Console", "Courier New", monospace;
+  	font-size: 20px;
+}
+
+.question {
+	display: flex;
+	justify-content: center;
+  	flex-direction: column;
+  	width:200px;
+  	height: 300px;
+  	text-align: center;  	
+}
+
+.bradio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.quiz{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	 align-content: space-around;	
+}
+
+form, h1 {
+	text-align: center;
+}
+
+.bravo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	widh : 200px;
+	font-size: 50px;
+}
+
+.erreur{
+	color:red;
+}
+
+.erreur2 {
+	
+	color:blue;
+}
