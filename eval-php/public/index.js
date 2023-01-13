@@ -1,34 +1,39 @@
 $(document).ready(() => {
-
     $('form').submit(function() {
-        return confirm("Etes-vous sûr de soumettre votre candidature ?")
+        let prenom = $('#prenom');
+        let nom = $('#nom');
+        let email = $('#email');
+        let prenomError = $('#prenomError');
+        let nomError = $('#nomError');
+        let emailError = $('#emailError');
+        if(prenom.val() === '' || nom.val() === '' || email.val() === ''){
+            if(prenom.val() === ''){
+                prenomError.text('Le prénom doit être rempli')
+            }
+
+            if(nom.val() === ''){
+                nomError.text('Le nom doit être rempli')
+            }
+
+            if(email.val() === ''){
+                emailError.text('L\'email doit être rempli');
+            }
+            return false;
+        }
+        else if (email.val() !== '' && !isEmailFormat(email.val())){
+            emailError.text('Attention, l\'email n\'est pas correct');
+            email.focus();
+            return false;
+        }
+        else return confirm("Etes-vous sûr de soumettre votre candidature ?")
     });
 
-    let date = document.getElementById('date');
-    date.addEventListener('focusout', (event) => {
-        event.preventDefault();
-        ageChecker();
-    });
-
-    ageChecker();
-
-    function ageChecker(){
-        let dateOfBirth = new Date(date.value);
-        let age = new Date().getFullYear() - dateOfBirth.getFullYear();
-        let month = new Date().getMonth() - dateOfBirth.getMonth();
-
-        if (month < 0 || (month === 0 && new Date().getDate() < dateOfBirth.getDate())) {
-            age--;
+    function isEmailFormat(email){
+        let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (email.match(validRegex)) {
+            return true;
         }
-
-        if (age < 18 && age >= 0) {
-            alert('Vous êtes trop jeune');
-            date.style.color = 'red';
-        }
-        else if (age < 0){
-            alert('Vous devez être né pour utiliser cette application');
-            date.style.color = 'red';
-        }
-        else date.style.color = 'green';
+        else return false;
     }
+
 });
