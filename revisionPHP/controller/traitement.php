@@ -38,7 +38,7 @@ if (isset($_POST["submit-btn"], $_POST['nom'], $_POST['prenom'], $_POST['dateNai
             $errMessageemail2 = "false";
             setcookie("emailConfirmation", $emailConfirmation);
         }
-        header("Location: /index.php?nom=" . urlencode($errMessageNom) . "&prenom=" . urlencode($errMessagePrenom) . "&date=" . urlencode($errMessagedateNaissance) . "&email=" . urlencode($errMessageemail) . "&email2=" . urlencode($errMessageemail2));
+        header("Location: ../index.php?nom=" . urlencode($errMessageNom) . "&prenom=" . urlencode($errMessagePrenom) . "&date=" . urlencode($errMessagedateNaissance) . "&email=" . urlencode($errMessageemail) . "&email2=" . urlencode($errMessageemail2));
     } else {
         echo "Vous avez bien rempli le formulaire !";
     }
