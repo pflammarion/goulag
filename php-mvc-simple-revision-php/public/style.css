@@ -1,0 +1,25 @@
+input {
+    display: block;
+    width: 100%;
+    margin-bottom:15px;
+}
+label {
+    text-align: center;
+}
+input[type=submit]{
+    width:200px;
+    border-radius: 50px;
+    background-color:blue;
+    color:white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+form{
+    margin: 50px auto;
+    width: 500px;
+}
+
+.error{
+    color: red;
+}
